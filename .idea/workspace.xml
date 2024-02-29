@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a15ff8f5-4814-475d-94aa-e0b1404b55cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img/start.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comp/sign.kv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/doctor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/start1.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comp/start.kv" beforeDir="false" afterPath="$PROJECT_DIR$/comp/start.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.kv" beforeDir="false" afterPath="$PROJECT_DIR$/main.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709123657041</updated>
-      <workItem from="1709123659827" duration="8023000" />
+      <workItem from="1709123659827" duration="15385000" />
     </task>
     <servers />
   </component>
@@ -123,6 +127,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pythonProject1$main.coverage" NAME="main Coverage Results" MODIFIED="1709134596523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject1$main.coverage" NAME="main Coverage Results" MODIFIED="1709237317224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

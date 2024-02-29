@@ -1,0 +1,44 @@
+<RLabelButtonBehaviour+Label>:
+<LoginScreen>:
+    padding: '2.60cm'
+    orientation: 'vertical'
+    BoxLayout:
+        Label:
+            text: 'Sign In'
+            font_size: '1.05833cm'
+    BoxLayout:
+        orientation: 'vertical'
+        halign: 'center'
+        valign: 'center'
+        TextInput:
+            id: username
+            size_hint: None, None
+            width: '6.665cm'
+            height: '1.549cm'
+            hint_text: "Email"
+            halign: 'center'
+            valign: 'center'
+            font_size: '0.635cm'
+            padding: '10dp'
+            # pos_hint: {'center_x': 0.15, 'center_y': 0.15}
+        TextInput:
+            id: password
+            size_hint: None, None
+            width: '6.665cm'
+            height: '1.549cm'
+            hint_text: "Password"
+            halign: 'center'
+            valign: 'center'
+            font_size: '0.635cm'
+            password: True
+            padding: '10dp'
+        Button:
+            size_hint: None, None
+            width: '0.665cm'
+            height: '1.549cm'
+            text: 'Log In'
+            font_size: '0.635cm'
+            halign: 'center'
+            valign: 'center'
+            padding: '10dp'
+
