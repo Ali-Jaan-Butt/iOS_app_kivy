@@ -1,44 +1,81 @@
-<RLabelButtonBehaviour+Label>:
 <LoginScreen>:
-    padding: '2.60cm'
-    orientation: 'vertical'
-    BoxLayout:
-        Label:
-            text: 'Sign In'
-            font_size: '1.05833cm'
-    BoxLayout:
-        orientation: 'vertical'
-        halign: 'center'
-        valign: 'center'
-        TextInput:
-            id: username
-            size_hint: None, None
-            width: '6.665cm'
-            height: '1.549cm'
-            hint_text: "Email"
-            halign: 'center'
-            valign: 'center'
-            font_size: '0.635cm'
-            padding: '10dp'
-            # pos_hint: {'center_x': 0.15, 'center_y': 0.15}
-        TextInput:
-            id: password
-            size_hint: None, None
-            width: '6.665cm'
-            height: '1.549cm'
-            hint_text: "Password"
-            halign: 'center'
-            valign: 'center'
-            font_size: '0.635cm'
-            password: True
-            padding: '10dp'
-        Button:
-            size_hint: None, None
-            width: '0.665cm'
-            height: '1.549cm'
-            text: 'Log In'
-            font_size: '0.635cm'
-            halign: 'center'
-            valign: 'center'
-            padding: '10dp'
+    name: "create"
 
+    namee: namee
+    email: email
+    password: passw
+
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#39B3F2")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Already have an Account?"
+            on_release:
+                app.change_screen("sign_screen")
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.15
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()

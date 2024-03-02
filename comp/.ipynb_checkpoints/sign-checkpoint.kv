@@ -1,70 +1,56 @@
-#:import utils kivy.utils
 <SignScreen>:
-    f_username: username
-    f_password: password
-    BoxLayout:
-        orientation: 'vertical'
+    name: "login"
 
-        BoxLayout:
-            orientation: 'horizontal'
-            size_hint_y: None
-            height: dp(50)
-            spacing: 10
-
-            Button:
-                text: '< Back'
-                size_hint_x: None
-                width: dp(100)
-                on_press: app.on_back_pressed()  # Adjust the method as needed
-
-            Label:
-                text: 'Your Title'
-                font_size: '20sp'
-                color: 1, 1, 1, 1  # Adjust the color as needed
+    email: email
+    password: password
 
     FloatLayout:
-        size_hint: (1, 1)
-        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#39B3F2")
+            Rectangle:
+                size: self.size
+                pos: self.pos
 
-        GridLayout:
-            canvas.before:
-                Color:
-                    rgb: utils.get_color_from_hex("#39B3F2")
-                Rectangle:
-                    size: self.size
-                    pos: self.pos
-            rows: 2
-            cols: 2
-            padding: 350
-            spacing: 350
-            Label:
-                text: 'User Name:'
-                color: 0, 0, 0, 1
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-            TextInput:
-                id: username
-                size_hint: (None, None)
-                size: 200, 50
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-            Label:
-                text: 'Password:'
-                color: 0, 0, 0, 1
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-            TextInput:
-                id: password
-                password: True
-                size_hint: (None, None)
-                size: 200, 50
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        Label:
+            text:"Email: "
+            font_size: '0.635cm'
+            pos_hint: {"x":0.1, "top":0.9}
+            size_hint: 0.2, 0.09
 
-        BoxLayout:
-            orientation: 'vertical'
-            size_hint: None, None
-            size: 200, 50
-            #pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        TextInput:
+            id: email
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            pos_hint: {"x": 0.45 , "top":0.9}
+            size_hint: 0.4, 0.09
 
-            Button:
-                text: 'Submit'
-                #size_hint: (None, None)
-                size: 200, 50
-                #pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        Label:
+            text:"Password: "
+            font_size: '0.635cm'
+            pos_hint: {"x":0.1, "top":0.7}
+            size_hint: 0.2, 0.09
+
+        TextInput:
+            id: password
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            password: True
+            pos_hint: {"x": 0.45, "top":0.7}
+            size_hint: 0.4, 0.09
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.2
+            font_size: (root.width**2 + root.height**2) / 13**4
+            text: "Login"
+            on_release:
+                app.change_screen("home_screen")
+                
+        Button:
+            pos_hint:{"x":0.3,"y":0.3}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Don't have an Account?"
+            on_release:
+                app.change_screen("login_screen")
