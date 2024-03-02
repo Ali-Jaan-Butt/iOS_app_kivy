@@ -1,8 +1,17 @@
 <HomeScreen>:
     FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#39B3F2")
+            Rectangle:
+                size: self.size
+                pos: self.pos
         GridLayout:
             rows: 1
-            pos_hint: {"top": 0, "left": 1}
+            pos_hint: {"top": 1.4, "left": 2.1}
             size_hint: 1, 1
-            Image:
-                source: "img/welcome.png"
+            halign: 'left'
+            Label:
+                text: "Welcome"
+                font_size: (root.width**2 + root.height**2) / 14**4
+                color: 0, 0, 0, 1
