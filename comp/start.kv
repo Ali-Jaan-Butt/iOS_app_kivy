@@ -9,7 +9,6 @@
                     size: self.size
                     pos: self.pos
             rows: 2
-            # pos_hint: {"top":1, "left":1}
             size_hint_y: None
             height: dp(700)
             Image:
@@ -29,7 +28,6 @@
                     size: 200, 50  # Set the desired width and height of the button
                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Center the button in the layout
 
-                # Other widgets or layouts can be added below as needed
                     on_release: app.change_screen("sign_screen")
                 Button:
                     canvas.before:
@@ -40,6 +38,5 @@
                     size: 200, 50  # Set the desired width and height of the button
                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Center the button in the layout
 
-                # Other widgets or layouts can be added below as needed
                     on_release: app.change_screen("login_screen")
 
