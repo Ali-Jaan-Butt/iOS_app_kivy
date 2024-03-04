@@ -5,6 +5,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager
 from kivy.uix.label import Label
 from kivy.uix.popup import Popup
+from kivy.properties import NumericProperty 
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
@@ -17,6 +18,8 @@ class StartScreen(Screen):
 
 
 class HomeScreen(Screen):
+    image_width = NumericProperty(50)
+    image_height = NumericProperty(50)
     pass
 
 

@@ -15,3 +15,36 @@
                 text: "Welcome"
                 font_size: (root.width**2 + root.height**2) / 14**4
                 color: 0, 0, 0, 1
+        BoxLayout:
+            Image:
+                source: "img/home.jpeg"
+                size_hint_x: 0.4
+                allow_stretch: True
+                pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+        BoxLayout:
+            Button:
+                text: "Cardiology"
+                pos_hint:{"x":0.15,"y":0.4}
+                size_hint: 0.5, 0.1
+                font_size: '0.3cm'
+            Button:
+                text: "Physicians"
+                pos_hint:{"x":0.5,"y":0.4}
+                size_hint: 0.5, 0.1
+                font_size: '0.3cm'
+            Button:
+                text: "Psychiatrist"
+                pos_hint:{"x":0.15,"y":0.4}
+                size_hint: 0.5, 0.1
+                font_size: '0.3cm'
+            Button:
+                text: "Gynecologist"
+                pos_hint:{"x":0.5,"y":0.4}
+                size_hint: 0.5, 0.1
+                font_size: '0.3cm'
+        Button:
+            text: "Back"
+            pos_hint:{"x":0.01,"y":0.95}
+            size_hint: 0.1, 0.01
+            font_size: '0.3cm'
+            on_release: app.change_screen('sign_screen')
