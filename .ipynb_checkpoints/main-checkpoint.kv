@@ -2,6 +2,7 @@
 #:include comp/home.kv
 #:include comp/sign.kv
 #:include comp/login.kv
+#:include comp/doctors.kv
 GridLayout:
     cols: 1
     ScreenManager:
@@ -18,3 +19,6 @@ GridLayout:
         LoginScreen:
             name: "login_screen"
             id: login_screen
+        DoctorsList:
+            name: "doctors_list"
+            id: doctors_list

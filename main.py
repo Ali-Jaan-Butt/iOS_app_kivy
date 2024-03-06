@@ -2,6 +2,7 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import ScreenManager
 from kivy.uix.label import Label
 from kivy.uix.popup import Popup
@@ -28,6 +29,10 @@ class SignScreen(Screen):
 
 
 class LoginScreen(Screen):
+    pass
+
+
+class DoctorsList(Screen):
     pass
 
 

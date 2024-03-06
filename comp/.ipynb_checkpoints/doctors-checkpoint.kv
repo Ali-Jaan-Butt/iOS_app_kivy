@@ -1,0 +1,20 @@
+<DoctorsList>:
+    FloatLayout:
+        GridLayout:
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#39B3F2")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+    BoxLayout:
+        Label:
+            text:"Doctor1"
+            font_size: '0.635cm'
+            #pos_hint: {"x":0.1, "top":0.9}
+            size_hint: 0.2, 0.09
+        Label:
+            text:"Doctor2"
+            font_size: '0.635cm'
+            #pos_hint: {"x":0.3, "top":0.7}
+            size_hint: 0.2, 0.09
